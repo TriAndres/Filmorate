@@ -1,0 +1,42 @@
+controllers-films-users
+------------------
+POST http://localhost:8080/users
+{
+    "id":1,
+    "email":"aaa@yandex.ru",
+    "login":"12345",
+    "name":"Andrei",
+    "birthday":"2023-01-01"
+}
+
+PUT http://localhost:8080/users
+{
+    "id":1,
+    "email":"aaa@yandex.ru",
+    "login":"12345",
+    "name":"Egor",
+    "birthday":"2023-01-01"
+}
+
+GET http://localhost:8080/users
+
+------------------
+POST http://localhost:8080/films
+{
+    "id":1,
+    "name":"aaa",
+    "description":"aaa111",
+    "releaseDate":"2023-01-01",
+    "duration":30
+}
+
+PUT http://localhost:8080/films
+{
+    "id":1,
+    "name":"bbb",
+    "description":"bbb111",
+    "releaseDate":"2023-01-01",
+    "duration":30
+}
+
+GET http://localhost:8080/films
