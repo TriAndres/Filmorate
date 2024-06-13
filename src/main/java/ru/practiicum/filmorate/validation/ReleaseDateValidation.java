@@ -1,4 +1,4 @@
-package ru.practiicum.validation;
+package ru.practiicum.filmorate.validation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
