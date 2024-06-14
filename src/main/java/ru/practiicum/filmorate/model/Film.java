@@ -27,5 +27,8 @@ public class Film {
     @NotNull
     @Positive(message = "Продолжительность фильма не может бытьотрицательной")
     private Integer duration;
+    @NotNull
+    private final Mpa mpa;
     private final Set<Long> likes = new HashSet<>();
+    private final Set<Genre> genres = new HashSet<>();
 }
