@@ -28,8 +28,7 @@ public class FilmService {
 
     public Film create(Film film) {
         log.info("Добавлен новый фильм");
-        filmStorage.create(film);
-        return film;
+        return filmStorage.create(film);
     }
 
     public Film update(Film film) {
@@ -51,12 +50,12 @@ public class FilmService {
 
     public void addLike(Long id, Long userId) {
         filmStorage.addLike(id, userId);
-        //log.info("Пользователь с id {} оставил с id {} лайк", userId,id);
+        log.info("Пользователь с id {} оставил с id {} лайк", userId,id);
     }
 
     public void deleteLike(Long id, Long userId) {
         filmStorage.deleteLike(id, userId);
-        //log.info("Лайк пользователя с id {} фильму с id {} удалён", id, userId);
+        log.info("Лайк пользователя с id {} фильму с id {} удалён", id, userId);
     }
 
     public List<Film> getMostPopularFilms(Long count) {
@@ -64,5 +63,9 @@ public class FilmService {
                 .sorted((f1, f2) -> f2.getLikes().size() - f1.getLikes().size())
                 .limit(count)
                 .collect(Collectors.toList());
+    }
+
+    public void deleteFilm(Long filmId) {
+        filmStorage.deleteFilm(filmId);
     }
 }

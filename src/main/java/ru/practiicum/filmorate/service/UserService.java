@@ -17,7 +17,7 @@ public class UserService {
     private final UserStorage userStorage;
     private final FilmService filmService;
 
-    public UserService(@Qualifier("inMemoryUserStorage") UserStorage userStorage,
+    public UserService(@Qualifier("userDbStorage") UserStorage userStorage,
                        FilmService filmService) {
         this.userStorage = userStorage;
         this.filmService = filmService;
@@ -77,5 +77,4 @@ public class UserService {
     public List<User> getAllFriends(Long userId) {
         return userStorage.getAllFriends(userId);
     }
-
 }
